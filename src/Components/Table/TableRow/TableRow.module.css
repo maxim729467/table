@@ -1,0 +1,21 @@
+.tableRow {
+  font-weight: 500;
+}
+
+.curColumn {
+  text-align: center;
+}
+
+.valColumn {
+  text-align: center;
+}
+
+.tableRow:nth-child(1n) {
+  background-color: rgb(12, 41, 95);
+  color: #fff;
+}
+
+.tableRow:nth-child(2n) {
+  background-color: cornflowerblue;
+  color: #000;
+}
