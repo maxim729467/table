@@ -2,8 +2,9 @@ import React from "react";
 import { titleSection, heading, timeStamp } from "./Title.module.css";
 
 const convertTime = (timestamp) => {
-  const currentTime = new Date().getTime();
-  const time = new Date(currentTime - timestamp).toLocaleString();
+  const milliseconds = timestamp * 1000;
+  const dateObject = new Date(milliseconds);
+  const time = dateObject.toLocaleString();
   return time;
 };
 

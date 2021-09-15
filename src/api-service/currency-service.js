@@ -1,6 +1,10 @@
 import data from "../json/data.json";
 
 export const fetchCurrencies = async () => {
-  await new Promise((resolve) => setTimeout(resolve, 2000));
-  return data;
+  return await new Promise((onResolve, onReject) => {
+    setTimeout(() => {
+      onResolve(data);
+      onReject("error occured");
+    }, 2000);
+  });
 };
